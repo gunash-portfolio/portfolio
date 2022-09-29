@@ -15,11 +15,13 @@
   font-weight: 400;
 }
 /* Default css */
+/************ Default Css ************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
@@ -31,7 +33,7 @@ body {
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
-  font-family: "Nabra";
+  font-family: "Centra", sans-serif !important;
 }
 
 h1,
@@ -44,6 +46,7 @@ h6 {
   padding: 0;
   line-height: normal;
 }
+
 p,
 a,
 li,
@@ -238,7 +241,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
-
 .App {
   text-align: center;
 }
