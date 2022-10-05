@@ -1,6 +1,10 @@
 import React from "react";
-import { Col, Container, Row, Tab } from "react-bootstrap";
-
+import { Col, Container, Row, Tab, Nav } from "react-bootstrap";
+import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project-img2.png";
+import projImg3 from "../assets/img/project-img3.png";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import { ProjectCard } from "./ProjectCard";
 export const Projects = () => {
   const projects = [
     {
@@ -59,11 +63,23 @@ export const Projects = () => {
                   <Nav.Link eventKey="third">Tab Three</Nav.Link>
                 </Nav.Item>
               </Nav>
+
+              <Tab.Content>
+                <Tab.Pane eventKey={"first"}>
+                  <Row>
+                    {projects.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey={"second"}>Loren Ipsum</Tab.Pane>
+                <Tab.Pane eventKey={"third"}>Loren Ipsum</Tab.Pane>
+              </Tab.Content>
             </Tab.Container>
-            <Tab.Content></Tab.Content>
           </Col>
         </Row>
       </Container>
+      <img className="background-image-right" src={colorSharp2} />
     </section>
   );
 };
